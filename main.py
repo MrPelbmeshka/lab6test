@@ -1,16 +1,15 @@
-# lab1.py - первая лабораторная работа
-def calculate_sum(numbers):
-    """Вычисление суммы чисел"""
-    total = 0
-    for num in numbers:
-        total += num
-    return total
+# lab1.py - первая лабораторная работа (ИЗМЕНЕННАЯ ВЕРСИЯ В lab2)
+def calculate_average(numbers):
+    """Вычисление среднего арифметического"""
+    if not numbers:
+        return 0
+    return sum(numbers) / len(numbers)
 
 def main():
     """Основная функция"""
-    numbers = [1, 2, 3, 4, 5]
-    result = calculate_sum(numbers)
-    print(f"Сумма чисел {numbers} равна {result}")
+    numbers = [10, 20, 30, 40, 50]
+    result = calculate_average(numbers)
+    print(f"Среднее чисел {numbers} равно {result}")
     
 if __name__ == "__main__":
     main()
