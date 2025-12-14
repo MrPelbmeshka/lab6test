@@ -1,15 +1,19 @@
-# lab1.py - первая лабораторная работа (ИЗМЕНЕННАЯ ВЕРСИЯ В lab2)
-def calculate_average(numbers):
-    """Вычисление среднего арифметического"""
+# lab2.py - вторая лабораторная работа
+def find_max(numbers):
+    """Нахождение максимального числа"""
     if not numbers:
-        return 0
-    return sum(numbers) / len(numbers)
+        return None
+    max_num = numbers[0]
+    for num in numbers:
+        if num > max_num:
+            max_num = num
+    return max_num
 
 def main():
     """Основная функция"""
-    numbers = [10, 20, 30, 40, 50]
-    result = calculate_average(numbers)
-    print(f"Среднее чисел {numbers} равно {result}")
+    numbers = [3, 7, 2, 9, 5]
+    result = find_max(numbers)
+    print(f"Максимальное число в списке {numbers} равно {result}")
     
 if __name__ == "__main__":
     main()
